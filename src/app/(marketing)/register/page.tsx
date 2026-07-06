@@ -191,7 +191,7 @@ export default function RegisterPage() {
               variant="accent"
               type="submit"
               isLoading={isLoading}
-              className="w-full text-xs font-semibold py-2.5 mt-2 bg-brand-charcoal hover:bg-neutral-800 text-brand-warmWhite border-brand-charcoal"
+              className="w-full text-xs font-semibold py-2.5 mt-2 bg-brand-blue hover:bg-blue-600 text-white border-brand-blue shadow-premium"
             >
               Initialize Workspace Node
               <ArrowRight className="w-3.5 h-3.5 ml-1.5" />
@@ -213,7 +213,7 @@ export default function RegisterPage() {
 
         {/* Demo Notification */}
         {!isSupabaseConfigured && (
-          <div className="flex items-center justify-center space-x-2 text-[10px] text-brand-stone font-medium bg-neutral-200/30 border border-border rounded-lg py-2 px-3">
+          <div className="flex items-center justify-center space-x-2 text-[10px] text-brand-stone font-medium bg-[#0C101B] border border-border rounded-lg py-2.5 px-3">
             <ShieldCheck className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
             <span>Running in Demo Sandbox (Supabase environment variables optional)</span>
           </div>

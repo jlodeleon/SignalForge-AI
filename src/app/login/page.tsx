@@ -124,27 +124,27 @@ export default function LoginPage() {
         {/* Auth form box */}
         <div className="bg-card border border-border rounded-2xl shadow-popup p-6 md:p-8">
           {/* Tab selector */}
-          <div className="flex bg-neutral-200/50 border border-neutral-200 rounded-lg p-0.5 mb-6 relative">
+          <div className="flex bg-slate-950 border border-border/80 rounded-lg p-0.5 mb-6 relative">
             <button
               onClick={() => { setActiveTab("login"); setErrorMsg(""); }}
-              className={`flex-1 py-1.5 text-xs font-semibold rounded-md relative z-10 transition-colors ${activeTab === "login" ? "text-brand-charcoal" : "text-brand-stone"}`}
+              className={`flex-1 py-1.5 text-xs font-semibold rounded-md relative z-10 transition-colors ${activeTab === "login" ? "text-white" : "text-brand-slate hover:text-white"}`}
             >
               {activeTab === "login" && (
                 <motion.div
                   layoutId="auth-tab-active"
-                  className="absolute inset-0 bg-white rounded-md shadow-premium z-0"
+                  className="absolute inset-0 bg-brand-blue rounded-md shadow-premium z-0"
                 />
               )}
               <span className="relative z-10">Log In</span>
             </button>
             <button
               onClick={() => { setActiveTab("forgot"); setErrorMsg(""); }}
-              className={`flex-1 py-1.5 text-xs font-semibold rounded-md relative z-10 transition-colors ${activeTab === "forgot" ? "text-brand-charcoal" : "text-brand-stone"}`}
+              className={`flex-1 py-1.5 text-xs font-semibold rounded-md relative z-10 transition-colors ${activeTab === "forgot" ? "text-white" : "text-brand-slate hover:text-white"}`}
             >
               {activeTab === "forgot" && (
                 <motion.div
                   layoutId="auth-tab-active"
-                  className="absolute inset-0 bg-white rounded-md shadow-premium z-0"
+                  className="absolute inset-0 bg-brand-blue rounded-md shadow-premium z-0"
                 />
               )}
               <span className="relative z-10">Forgot Password</span>
@@ -230,7 +230,7 @@ export default function LoginPage() {
               variant="accent"
               type="submit"
               isLoading={isLoading}
-              className="w-full text-xs font-semibold py-2.5 mt-2 bg-brand-charcoal hover:bg-neutral-800 text-brand-warmWhite border-brand-charcoal"
+              className="w-full text-xs font-semibold py-2.5 mt-2 bg-brand-blue hover:bg-blue-600 text-white border-brand-blue shadow-premium"
             >
               {activeTab === "login" ? "Enter Workspace" : "Send Recovery Link"}
             </Button>
@@ -239,7 +239,7 @@ export default function LoginPage() {
 
         {/* Demo Mode Notice */}
         {!isSupabaseConfigured && (
-          <div className="mt-4 flex items-center justify-center space-x-2 text-[10px] text-brand-stone font-medium bg-neutral-200/30 border border-border rounded-lg py-2 px-3">
+          <div className="mt-4 flex items-center justify-center space-x-2 text-[10px] text-brand-stone font-medium bg-[#0C101B] border border-border/80 rounded-lg py-2.5 px-3">
             <ShieldCheck className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
             <span>Running in Demo Sandbox (Supabase environment variables optional)</span>
           </div>
@@ -251,7 +251,7 @@ export default function LoginPage() {
         <p>© 2026 SignalForge AI. All rights reserved.</p>
         <p className="mt-1 flex items-center justify-center space-x-1">
           <span>Built by</span>
-          <span className="font-serif font-extrabold text-neutral-800 tracking-tight">KrissDevHub Technologies</span>
+          <span className="font-serif font-extrabold text-foreground tracking-tight">KrissDevHub Technologies</span>
         </p>
       </footer>
     </main>
